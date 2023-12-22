@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="one">go back?</button><br><br>
+
+<img>
+<h1></h1>
+<p></p>
+<h3></h3>
+<script>
+    var t1=document.getElementById("one");
+    t1.addEventListener('click',()=>{
+        let a=confirm("do")
+        if(a){
+        window.history.back();
+        }
+    })
+    var di=document.createElement("div");
+    di.style.width="300px";
+    di.style.height="350px";
+    di.style.border="2px solid black";
+    di.style.backgroundColor="pink"
+    document.body.appendChild(di)
+    var t3=localStorage.getItem("seemore");
+   var t4=JSON.parse(t3);
+   var t2=document.getElementsByTagName("img")
+   t2[0].setAttribute("src",t4.image);
+   t2[0].style.width="100px";
+   t2[0].style.marginLeft="100px";
+   di.appendChild(t2[0]);
+   var t6=document.getElementsByTagName("h1")
+   t6[0].innerHTML=t4.id;
+   t6[0].style.textAlign="center";
+   di.appendChild(t6[0]);
+   var t7=document.getElementsByTagName("p")
+   t7[0].innerHTML=t4.title;
+   t7[0].style.textAlign="center";
+   di.appendChild(t7[0]);
+   var t8=document.getElementsByTagName("h3")
+   t8[0].innerHTML=t4.title;
+   t8[0].style.textAlign="center";
+   
+   di.appendChild(t8[0]);
+//    t2.addEventListener(('click'),()=>{
+        
+//    })
+</script>
+</body>
+</html>
